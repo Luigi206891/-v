@@ -14,7 +14,7 @@ using StringTools;
 /**
  * Loosley based on FlxTypeText lolol
  */
-class Alphabet extends FlxSpriteGroup;
+class Alphabet extends FlxSpriteGroup
 {
 	public var delay:Float = 0.05;
 	public var paused:Bool = false;
@@ -34,6 +34,8 @@ class Alphabet extends FlxSpriteGroup;
 	var _finalText:String = "";
 	var yMulti:Float = 1;
 
+	// custom shit
+	// amp, backslash, question mark, apostrophy, comma, angry faic, period
 	var lastSprite:AlphaCharacter;
 	var xPosResetted:Bool = false;
 
@@ -356,7 +358,8 @@ class Alphabet extends FlxSpriteGroup;
 				x = FlxMath.lerp(x, (targetY * 20) + 90 + xAdd, lerpVal);
 			}
 		}
-				if (isMenuItemCenter)
+
+        if (isMenuItemCenter)
 		{
 			var scaledY = FlxMath.remapToRange(targetY, 0, 1, 0, 1.3);
 
@@ -368,7 +371,6 @@ class Alphabet extends FlxSpriteGroup;
 				screenCenter(x);
 			}
 		}
-
 		super.update(elapsed);
 	}
 
